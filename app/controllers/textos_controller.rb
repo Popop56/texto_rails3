@@ -85,13 +85,63 @@ class TextosController < ApplicationController
   
   # Vote up
   def vote_up
-    @texto = Texto.find(params[:id])
-    @texto.good += 1
-    
-    if @texto.save
-      respond_with(@texto)
-    end  
+  	voted_texto = read_voted_texto # Get all already voted texto
+  	
+  	if !voted_texto.include?(params[:id])
+	    @texto = Texto.find(params[:id])
+	    @texto.good += 1
+	    
+	    if @texto.save
+	    	write_voted_texto(params[:id])
+	    	respond_with(@texto)
+	    end
+	end  
+  end
+
+  # Vote down
+  def vote_down
+  	voted_texto = read_voted_texto # Get all already voted texto
+  	
+  	if !voted_texto.include?(params[:id])
+	    @texto = Texto.find(params[:id])
+	    @texto.bad += 1
+	    
+	    if @texto.save
+	    	write_voted_texto(params[:id])
+	    	respond_with(@texto)
+	    end
+	end  
   end
   
+  # Add to favorite cookies
+  def favorite
+  	favorited_texto = read_favorited_texto # Get all already voted texto
+  	
+  	if !favorited_texto.include?(params[:id])
+  		@texto = Texto.find(params[:id])
+		write_favorited_texto(params[:id])
+	    respond_with(@texto)
+	end  
+  end
+  
+  
+  # private
+  protected
+  
+  def write_voted_texto(texto_id)
+  	cookies[:voted_texto] = cookies[:voted_texto].to_s.split(',').push(texto_id.to_s).join(',')
+  end
+  
+  def read_voted_texto
+  	cookies[:voted_texto].to_s.split(',')
+  end
+
+  def write_favorited_texto(texto_id)
+  	cookies[:favorited_texto] = cookies[:favorited_texto].to_s.split(',').push(texto_id.to_s).join(',')
+  end
+  
+  def read_favorited_texto
+  	cookies[:favorited_texto].to_s.split(',')
+  end
   
 end

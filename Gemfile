@@ -22,3 +22,5 @@ gem "sqlite3-ruby", :require => "sqlite3"
 # group :test do
 #   gem "webrat"
 # end
+gem "warden", "~> 0.9.3"
+gem "devise", "1.1.pre2"

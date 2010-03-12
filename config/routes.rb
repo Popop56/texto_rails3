@@ -1,8 +1,15 @@
 TextoRails3::Application.routes.draw do |map|
+  
+  
+  resources :user, :only => [:edit, :new]
+  resources :admins, :only => [:index]
+  devise_for :users, :admin
+  
+
 
   resources :textos do
     member do
-      get :vote_up
+      get :vote_up, :vote_down, :favorite
     end
     resources :comments
   end
