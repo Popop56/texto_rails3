@@ -1,0 +1,35 @@
+<% form_for(@texto) do |f| %>
+  <%= f.error_messages %>
+
+  <div class="field">
+    <%= f.label :content %><br />
+    <%= f.text_area :content %>
+  </div>
+  <div class="field">
+    <%= f.label :good %><br />
+    <%= f.text_field :good %>
+  </div>
+  <div class="field">
+    <%= f.label :bad %><br />
+    <%= f.text_field :bad %>
+  </div>
+  <div class="field">
+    <%= f.label :status %><br />
+    <%= f.text_field :status %>
+  </div>
+  <div class="field">
+    <%= f.label :texto_ref_id %><br />
+    <%= f.text_field :texto_ref_id %>
+  </div>
+  <div class="field">
+    <%= f.label :ip_address %><br />
+    <%= f.text_field :ip_address %>
+  </div>
+  <div class="field">
+    <%= f.label :validated_by %><br />
+    <%= f.text_field :validated_by %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

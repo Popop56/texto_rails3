@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  content: MyText
+  good: 1
+  bad: 1
+  status: 1
+  texto_ref_id: 1
+  ip_address: MyString
+  validated_by: 1
+
+two:
+  content: MyText
+  good: 1
+  bad: 1
+  status: 1
+  texto_ref_id: 1
+  ip_address: MyString
+  validated_by: 1

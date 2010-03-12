@@ -1,0 +1,33 @@
+<p>
+  <b>Content:</b>
+  <%= @comment.content %>
+</p>
+
+<p>
+  <b>Ip:</b>
+  <%= @comment.ip %>
+</p>
+
+<p>
+  <b>Good:</b>
+  <%= @comment.good %>
+</p>
+
+<p>
+  <b>Bad:</b>
+  <%= @comment.bad %>
+</p>
+
+<p>
+  <b>Flagged:</b>
+  <%= @comment.flagged %>
+</p>
+
+<p>
+  <b>Texto:</b>
+  <%= @comment.texto %>
+</p>
+
+
+<%= link_to 'Edit', edit_comment_path(@comment) %> |
+<%= link_to 'Back', comments_path %>

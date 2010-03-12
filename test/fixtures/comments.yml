@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  content: MyText
+  ip: MyString
+  good: 1
+  bad: 1
+  flagged: false
+  texto: 
+
+two:
+  content: MyText
+  ip: MyString
+  good: 1
+  bad: 1
+  flagged: false
+  texto: 

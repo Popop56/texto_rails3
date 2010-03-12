@@ -1,0 +1,12 @@
+<h1>Listing textos</h1>
+
+<% for texto in @textos %>
+	<%= render :partial => "texto", :locals => {:texto => texto} %>
+	<%= link_to 'Read Comments', texto %> 
+	<%= link_to 'Like', vote_up_texto_path(texto), :remote=>true %>
+<% end %>
+
+<br />
+<div id="fuck">dsadasdsa</div>
+
+<%= link_to 'New texto', new_texto_path %>

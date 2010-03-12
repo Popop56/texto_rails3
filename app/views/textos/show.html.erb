@@ -1,0 +1,13 @@
+<%= render :partial => "texto", :locals => {:texto => @texto} %>
+
+<div id="comments">
+<h2>Comments</h2>
+<%= render :partial => "comments/comment", :collection => @texto.comments %>
+</div>
+
+<h2>Add a comment:</h2>
+<%= render "comments/form" %>
+
+
+<%= link_to 'Edit', edit_texto_path(@texto) %> |
+<%= link_to 'Back', textos_path %>
