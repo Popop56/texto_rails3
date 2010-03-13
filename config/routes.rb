@@ -1,9 +1,12 @@
 TextoRails3::Application.routes.draw do |map|
+  resource :user, :only => [:edit, :new]
+
   
   
-  resources :user, :only => [:edit, :new]
-  resources :admins, :only => [:index]
-  devise_for :users, :admin
+  #resources :user, :only => [:edit, :new]
+  devise_for :users
+  #resources :admins, :only => [:index]
+  
   
 
 

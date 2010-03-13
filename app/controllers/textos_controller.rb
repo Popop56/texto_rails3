@@ -1,10 +1,16 @@
 class TextosController < ApplicationController
-  respond_to :html, :xml, :js
+  # Status
+  # 0 : Pending validation
+  # 1 : Online
+  # 2: flagged
+ 	
+	
+	respond_to :html, :xml, :js
   
   # GET /textos
   # GET /textos.xml
   def index
-    @textos = Texto.all
+    @textos = Texto.paginate :page => params[:page], :order => 'updated_at DESC'
 
     respond_to do |format|
       format.html # index.html.erb
@@ -26,11 +32,11 @@ class TextosController < ApplicationController
   # GET /textos/new
   # GET /textos/new.xml
   def new
-    @texto = Texto.new
+    @textos = Texto.new
 
     respond_to do |format|
       format.html # new.html.erb
-      format.xml  { render :xml => @texto }
+      format.xml  { render :xml => @textos }
     end
   end
 
@@ -43,6 +49,11 @@ class TextosController < ApplicationController
   # POST /textos.xml
   def create
     @texto = Texto.new(params[:texto])
+    # Set default values
+    @texto.bad = 0
+    @texto.good = 0
+    @texto.status = 0
+    @texto.ip_address = request.remote_ip
 
     respond_to do |format|
       if @texto.save

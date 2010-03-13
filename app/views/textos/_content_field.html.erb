@@ -1,0 +1,5 @@
+  <div class="field" id="textor_<%= index %>">
+	<% fields_for "texto[#{index}]", task do |f| %>
+	  <p><%= f.text_area :content %></p>
+	<% end %>
+  </div>
