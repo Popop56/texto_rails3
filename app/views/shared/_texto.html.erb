@@ -1,6 +1,11 @@
-<div class="texto">
+<div class="texto" id="texto_<%= texto.id %>">
 	<p><%=h texto.content %></p>
-	<%= render :partial => "shared/replyDIv", :collection => texto.replies %>
+	<%= render :partial => "shared/replyDiv", :collection => texto.replies %>
 	<br />
 	<p><%=h texto.created_at %></p>	
+	
+	<% if admin_signed_in? %>
+		<%= link_to 'Approve', approve_admins_texto_path(texto), :remote => "true" %>
+		<%= link_to 'Reject', admins_texto_path(texto), :remote => "true", :method => "delete" %>
+	<% end %>
 </div>

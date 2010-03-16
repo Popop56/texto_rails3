@@ -5,8 +5,19 @@ TextoRails3::Application.routes.draw do |map|
   
   #resources :user, :only => [:edit, :new]
   devise_for :users, :admin
-  resources :admins do
-    resources :textos
+  
+  #resources :admins
+  #  resources :textos, :controller => "admins/texto"
+  #end
+  
+  namespace :admins do
+  	
+  	resources :textos do
+  	  member do
+  	    get :approve
+  	  end
+  	end
+  
   end
   
   

@@ -10,7 +10,7 @@ class TextosController < ApplicationController
   # GET /textos
   # GET /textos.xml
   def index
-    @textos = Texto.paginate :page => params[:page], :order => 'updated_at DESC'
+    @textos = Texto.paginate :page => params[:page], :conditions => ['status = ?', "1"], :order => 'updated_at DESC'
 
     respond_to do |format|
       format.html # index.html.erb

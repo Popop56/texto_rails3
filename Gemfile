@@ -25,3 +25,4 @@ gem "sqlite3-ruby", :require => "sqlite3"
 gem "warden", "~> 0.9.3"
 gem "devise", "1.1.pre4"
 gem 'will_paginate', '3.0.pre'
+gem "super_inplace_controls"
