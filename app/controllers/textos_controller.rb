@@ -56,7 +56,6 @@ class TextosController < ApplicationController
     @texto.good = 0
     @texto.status = 0
     @texto.ip_address = request.remote_ip
-    logger.debug "user: #{current_user.id}"
         
     # If user is logged in, we add his ID
     if user_signed_in?
