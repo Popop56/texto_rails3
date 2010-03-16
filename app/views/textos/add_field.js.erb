@@ -1,0 +1,10 @@
+var index = $(".reply").length;
+
+// The index + length (cause it start at 0...)
+console.log(index);
+
+html = 	'<%= escape_javascript(render :partial => "reply_ugly", :locals => { :index => "INDEX" } ) %>';
+console.log(html.replace("INDEX", 'dsad'));
+html.replace("INDEX", 'dsad');
+//$("#reply").append(html);
+

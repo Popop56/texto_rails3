@@ -3,3 +3,1462 @@
 	background-color: #f9f9f9;
 	margin:5px;
 }
+
+.reply {
+	border:1px solid #000;
+	background-color: #ffffff;
+	margin:5px;
+	margin-left:20px;
+	width:75%;	
+}
+
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	font-family: inherit;
+	vertical-align: baseline
+}
+*:focus {
+	outline: 0
+}
+body {
+	line-height: 1;
+	color: #000;
+	background: #fff
+}
+ol,ul {
+	list-style: none
+}
+table {
+	border-collapse: separate;
+	border-spacing: 0;
+	vertical-align: middle
+}
+caption,th,td {
+	text-align: left;
+	font-weight: normal;
+	vertical-align: middle
+}
+q,blockquote {
+	quotes: "" ""
+}
+q:before,q:after,blockquote:before,blockquote:after {
+	content: ""
+}
+a img {
+	border: none
+}
+body {
+	line-height: 1.5;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	color: #2b2b2b;
+	font-size: 100%
+}
+h1 {
+	font-weight: normal;
+	color: #1a1a1a;
+	font-size: 3em;
+	line-height: 1;
+	margin-bottom: 0.5em
+}
+h1 img {
+	margin: 0
+}
+h2 {
+	font-weight: normal;
+	color: #1a1a1a;
+	font-size: 2em;
+	margin-bottom: 0.75em
+}
+h3 {
+	font-weight: normal;
+	color: #1a1a1a;
+	font-size: 1.5em;
+	line-height: 1;
+	margin-bottom: 1em
+}
+h4 {
+	font-weight: normal;
+	color: #1a1a1a;
+	font-size: 1.2em;
+	line-height: 1.25;
+	margin-bottom: 1.25em
+}
+h5 {
+	font-weight: normal;
+	color: #1a1a1a;
+	font-size: 1em;
+	font-weight: bold;
+	margin-bottom: 1.5em
+}
+h6 {
+	font-weight: normal;
+	color: #1a1a1a;
+	font-size: 1em;
+	font-weight: bold
+}
+h2 img,h3 img,h4 img,h5 img,h6 img {
+	margin: 0
+}
+p {
+	margin: 0 0 1.5em
+}
+p img.left {
+	display: inline;
+	float: left;
+	margin: 1.5em 1.5em 1.5em 0;
+	padding: 0
+}
+p img.right {
+	display: inline;
+	float: right;
+	margin: 1.5em 0 1.5em 1.5em;
+	padding: 0
+}
+a {
+	text-decoration: underline;
+	color: #841616
+}
+a:visited {
+	color: #841616
+}
+a:focus {
+	color: #841616
+}
+a:hover {
+	color: #7b1212
+}
+a:active {
+	color: #841616
+}
+blockquote {
+	margin: 1.5em;
+	color: #666;
+	font-style: italic
+}
+strong {
+	font-weight: bold
+}
+em {
+	font-style: italic
+}
+dfn {
+	font-style: italic;
+	font-weight: bold
+}
+sup,sub {
+	line-height: 0
+}
+abbr,acronym {
+	border-bottom: 1px dotted #666
+}
+address {
+	margin: 0 0 1.5em;
+	font-style: italic
+}
+del {
+	color: #666
+}
+pre {
+	margin: 1.5em 0;
+	white-space: pre
+}
+pre,code,tt {
+	font: 1em 'andale mono', 'lucida console', monospace;
+	line-height: 1.5
+}
+li ul,li ol {
+	margin: 0
+}
+ul,ol {
+	margin: 0 1.5em 1.5em 0;
+	padding-left: 3.333em
+}
+ul {
+	list-style-type: disc
+}
+ol {
+	list-style-type: decimal
+}
+dl {
+	margin: 0 0 1.5em 0
+}
+dl dt {
+	font-weight: bold
+}
+dd {
+	margin-left: 1.5em
+}
+table {
+	margin-bottom: 1.4em;
+	width: 100%
+}
+th {
+	font-weight: bold
+}
+thead th {
+	background: #c3d9ff
+}
+th,td,caption {
+	padding: 4px 10px 4px 5px
+}
+tr.even td {
+	background: #e5ecf9
+}
+tfoot {
+	font-style: italic
+}
+caption {
+	background: #eee
+}
+.quiet {
+	color: #5e5e5e
+}
+.loud {
+	color: #090909
+}
+.error {
+	padding: .8em;
+	margin-bottom: 1em;
+	border: 2px solid #dddddd;
+	background: #fbe3e4;
+	color: #8a1f11;
+	border-color: #fbc2c4
+}
+.error a {
+	color: #8a1f11
+}
+.notice {
+	padding: .8em;
+	margin-bottom: 1em;
+	border: 2px solid #dddddd;
+	background: #fff6bf;
+	color: #514721;
+	border-color: #ffd324
+}
+.notice a {
+	color: #514721
+}
+.success {
+	padding: .8em;
+	margin-bottom: 1em;
+	border: 2px solid #dddddd;
+	background: #e6efc2;
+	color: #264409;
+	border-color: #c6d880
+}
+.success a {
+	color: #264409
+}
+.hide {
+	display: none
+}
+.highlight {
+	background: yellow
+}
+.added {
+	background: #006600;
+	color: white
+}
+.removed {
+	background: #990000;
+	color: white
+}
+a {
+	color: #841616;
+	text-decoration: none;
+	font-weight: bold
+}
+a:visited {
+	color: #841616
+}
+a:focus {
+	color: #841616
+}
+a:hover {
+	color: #7b1212
+}
+a:active {
+	color: #841616
+}
+a:hover {
+	text-decoration: underline
+}
+body {
+	-webkit-text-stroke: 1px transparent
+}
+@media only screen and (max-device-width:480px) {body {
+	-webkit-text-stroke: 0 black
+}
+
+}
+body {
+	border-top: solid 1px #5e5f5f;
+	background: #1d1d1d url('http://z.textsfromlastnight.com/images/bg-page.png') repeat-x 0px 0px
+}
+h2 {
+	font-weight: bold;
+	font-size: 2.0em;
+	line-height: 1.1em;
+	margin-bottom: 10px
+}
+h3 {
+	font-weight: bold;
+	font-size: 1.6em;
+	line-height: 1.1em;
+	margin-bottom: 10px
+}
+h4 {
+	font-weight: normal;
+	font-size: 1.3em;
+	color: #777;
+	line-height: 1.1em
+}
+input[type="text"],input[type="password"] {
+	padding: 8px;
+	line-height: 1;
+	font-size: 14px;
+	color: #2b2b2b;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border: solid 1px #d2d2d2;
+	background: #fff url('http://z.textsfromlastnight.com/images/bg-input-main.png') repeat-x 0px 0px
+}
+input[type="text"].placeholder,input[type="password"].placeholder {
+	color: #888
+}
+input[type="text"]:focus,input[type="password"]:focus {
+	border-color: #aaa
+}
+textarea {
+	padding: 8px;
+	font-size: 14px;
+	color: #2b2b2b;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border: solid 1px #d2d2d2;
+	background: #fff url('http://z.textsfromlastnight.com/images/bg-input-main.png') repeat-x 0px 0px;
+	resize: none
+}
+textarea.placeholder {
+	color: #888
+}
+textarea:focus {
+	border-color: #aaa
+}
+a.button {
+	display: -moz-inline-box;
+	-moz-box-orient: vertical;
+	display: inline-block;
+	vertical-align: middle;#display:inline;#vertical-align:auto;
+	padding: 6px 15px 7px 15px;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	background: #820d0d url('http://z.textsfromlastnight.com/images/bg-button.png') repeat-x 0px 0px;
+	color: #fff;
+	text-shadow: 0px 1px 2px rgba(0,0,0,0.5);
+	border: solid 1px #6b1616;
+	-webkit-box-shadow: 0px 1px 2px rgba(0,0,0,0.2);
+	-moz-box-shadow: 0px 1px 2px rgba(0,0,0,0.2);
+	box-shadow: 0px 1px 2px rgba(0,0,0,0.2);
+	line-height: 1
+}
+a.button:hover {
+	text-decoration: none
+}
+form.box {
+	padding: 10px 10px 0px 10px;
+	margin-bottom: 10px;
+	background: #f5f5f5 url('http://z.textsfromlastnight.com/images/bg-text-top.png') repeat-x 0px 0px;
+	border: solid 1px #d0d0d0;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-webkit-box-shadow: 0px 1px 1px rgba(0,0,0,0.1);
+	-moz-box-shadow: 0px 1px 1px rgba(0,0,0,0.1);
+	box-shadow: 0px 1px 1px rgba(0,0,0,0.1)
+}
+form.box ul {
+	margin: 0;
+	padding: 0
+}
+form.box ul li {
+	list-style-type: none;
+	margin-left: 0px
+}
+form.box ul li {
+	display: block;
+	margin-bottom: 1em
+}
+p.large-link {
+	margin-bottom: 10px
+}
+p.large-link a {
+	font-size: 1.3em
+}
+.promo {
+	display: inline;
+	float: right;
+	width: 165px;
+	height: 78px;
+	padding: 20px;
+	margin-left: 15px;
+	margin-bottom: 15px;
+	margin-top: 10px;
+	background: url('http://z.textsfromlastnight.com/images/bg-promo.png');
+	font-size: 15px;
+	color: #808080;
+	text-shadow: 0px 1px 0px rgba(255,255,255,0.8);
+	cursor: pointer
+}
+.promo h5 {
+	font-size: 23px;
+	color: #841616;
+	margin-top: 15px;
+	margin-bottom: 3px;
+	line-height: 1;
+	text-shadow: 0px 1px 0px rgba(255,255,255,0.8)
+}
+.go-mobile {
+	background-color: #CCCCCC;
+	border: 1px solid brown;
+	font-size: 14px;
+	margin: 0 auto 10px;
+	padding: 1px 20px;
+	text-align: center;
+	text-shadow: 0 1px 0 #FFFFFF;
+	width: 500px
+}
+.go-mobile a {
+	color: #222222
+}
+.justify {
+	text-align: justify
+}
+.welcome {
+	padding: 20px 20px 0 20px;
+	background: #ffffcc;
+	border: solid 1px #d0d0d0;
+	position: relative;
+	margin-bottom: 20px;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-webkit-box-shadow: 0px 1px 1px rgba(0,0,0,0.1);
+	-moz-box-shadow: 0px 1px 1px rgba(0,0,0,0.1);
+	box-shadow: 0px 1px 1px rgba(0,0,0,0.1)
+}
+.welcome .email {
+	font-size: 80%
+}
+.shrink {
+	padding: 2px 5px;
+	margin-bottom: 5px;
+	font-size: 80%
+}
+.shrink p {
+	margin: 0
+}
+#container {
+	width: 940px;
+	margin: 0 auto;
+	overflow: hidden;
+	display: inline-block;
+	width: 960px;
+	margin-top: 20px
+}
+#container {
+	display: block
+}
+#container #ads-top {
+	overflow: hidden;
+	display: inline-block;
+	margin-bottom: 30px;
+	width: 970px
+}
+#container #ads-top {
+	display: block
+}
+#container #ads-top .main-ad {
+	margin-right: 6px
+}
+#container #ads-top a {
+	display: inline;
+	float: left
+}
+#container .links {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	overflow: hidden;
+	display: inline-block;
+	display: inline;
+	float: right;
+	margin-bottom: 20px
+}
+#container .links {
+	display: block
+}
+#container .links li {
+	list-style-type: none;
+	margin-left: 0px;
+	white-space: nowrap;
+	display: inline;
+	float: left;
+	padding-left: 4px;
+	padding-right: 4px
+}
+#container .links li.first {
+	padding-left: 0px
+}
+#container .links li.last {
+	padding-right: 0px
+}
+#container .links a {
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 11px;
+	letter-spacing: 1px;
+	display: -moz-inline-box;
+	-moz-box-orient: vertical;
+	display: inline-block;
+	vertical-align: middle;#display:inline;#vertical-align:auto;
+	padding: 0px 10px;
+	height: 23px;
+	line-height: 23px;
+	text-shadow: 0px -1px 0px #000;
+	background: url('http://z.textsfromlastnight.com/images/bg-top-btns.png') repeat-x 0px 0px;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-webkit-box-shadow: 0px 1px 1px #000;
+	-moz-box-shadow: 0px 1px 1px #000;
+	box-shadow: 0px 1px 1px #000;
+	-webkit-transition: linear 0.1s
+}
+#container .links a:hover {
+	text-decoration: none;
+	color: #bbb
+}
+#header {
+	background: url('http://z.textsfromlastnight.com/images/header.png') no-repeat 0px 0px;
+	height: 49px;
+	position: relative;
+	top: 3px;
+	clear: both
+}
+#header h1 a {
+	text-indent: -9999em;
+	overflow: hidden;
+	background-image: url('http://z.textsfromlastnight.com/images/logo.png');
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	overflow: hidden;
+	height: 123px;
+	width: 375px;
+	display: -moz-inline-box;
+	-moz-box-orient: vertical;
+	display: inline-block;
+	vertical-align: middle;#display:inline;#vertical-align:auto;
+	position: absolute;
+	top: -50px;
+	left: 50px
+}
+#header .nav {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	overflow: hidden;
+	display: inline-block;
+	display: inline;
+	float: right;
+	color: #7b7b7b;
+	font-weight: bold;
+	text-shadow: 0px 1px 0px rgba(255,255,255,0.7);
+	vertical-align: baseline;
+	line-height: 45px
+}
+#header .nav {
+	display: block
+}
+#header .nav li {
+	list-style-type: none;
+	margin-left: 0px;
+	white-space: nowrap;
+	display: inline;
+	float: left;
+	padding-left: 0;
+	padding-right: 0
+}
+#header .nav li.first {
+	padding-left: 0px
+}
+#header .nav li.last {
+	padding-right: 0px
+}
+#header .nav li {
+	background: url('http://z.textsfromlastnight.com/images/bg-nav-main.png') no-repeat right 0px
+}
+#header .nav li:last-child {
+	background: transparent !important
+}
+#header .nav li.selected {
+	background: url('http://z.textsfromlastnight.com/images/bg-nav-selected.png') no-repeat right 0px
+}
+#header .nav li.title {
+	border-left: none;
+	padding: 0 13px
+}
+#header .nav li.secondary,#header .nav li.title {
+	background: url('http://z.textsfromlastnight.com/images/bg-nav.png') no-repeat right 0px
+}
+#header .nav li.secondary a,#header .nav li.title a {
+	color: #7b7b7b;
+	font-size: 16px
+}
+#header .nav li.secondary a:hover,#header .nav li.title a:hover {
+	color: #555
+}
+#header .nav li a {
+	padding: 0px 13px;
+	line-height: 45px;
+	color: #971919;
+	font-size: 21px;
+	display: -moz-inline-box;
+	-moz-box-orient: vertical;
+	display: inline-block;
+	vertical-align: middle;#display:inline;#vertical-align:auto;
+	-webkit-transition: color linear 0.1s
+}
+#header .nav li a:hover {
+	color: #cb2b2b;
+	text-decoration: none
+}
+#header #best-menu {
+	left: 553px;
+	top: 45px;
+	display: none
+}
+#header #best-menu .pointer {
+	left: 28px
+}
+#header #worst-menu {
+	top: 45px;
+	left: 624px;
+	display: none
+}
+#header #worst-menu .pointer {
+	left: 36px
+}
+#header .filter {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	overflow: hidden;
+	display: inline-block;
+	position: absolute;
+	background: url('http://z.textsfromlastnight.com/images/bg-filter-bar.png') repeat-x 0px 0px;
+	border-top-right-radius: 3px;
+	-moz-border-radius-topright: 3px;
+	-webkit-border-top-right-radius: 3px;
+	border-bottom-right-radius: 3px;
+	-moz-border-radius-bottomright: 3px;
+	-webkit-border-bottom-right-radius: 3px;
+	-webkit-box-shadow: 0px 1px 2px rgba(0,0,0,0.2);
+	-moz-box-shadow: 0px 1px 2px rgba(0,0,0,0.2);
+	box-shadow: 0px 1px 2px rgba(0,0,0,0.2);
+	height: 32px;
+	padding-left: 4px;
+	padding-right: 0px;
+	border: solid 1px #aaa;
+	overflow: visible
+}
+#header .filter {
+	display: block
+}
+#header .filter li {
+	list-style-type: none;
+	margin-left: 0px;
+	white-space: nowrap;
+	display: inline;
+	float: left;
+	padding-left: 4px;
+	padding-right: 4px
+}
+#header .filter li.first {
+	padding-left: 0px
+}
+#header .filter li.last {
+	padding-right: 0px
+}
+#header .filter .pointer {
+	display: block;
+	width: 16px;
+	height: 7px;
+	background: url('http://z.textsfromlastnight.com/images/pointer-filter-bar.png') no-repeat 0px 0px;
+	position: absolute;
+	top: -7px
+}
+#header .filter li {
+	padding: 0 15px;
+	line-height: 32px;
+	background: url('http://z.textsfromlastnight.com/images/divider-filter-bar.png') no-repeat right 0px
+}
+#header .filter li.selected a {
+	color: #841616
+}
+#header .filter li:last-child {
+	background: none
+}
+#header .filter a {
+	color: #272727;
+	font-size: 13px;
+	text-shadow: 0px 1px 0px rgba(255,255,255,0.5);
+	-webkit-transition: color linear 0.1s
+}
+#header .filter a:hover {
+	color: #555;
+	text-decoration: none
+}
+#content {
+	background-color: #fff;
+	overflow: hidden;
+	display: inline-block;
+	padding: 50px 20px 20px 20px
+}
+#content {
+	display: block
+}
+#content #main {
+	display: inline;
+	float: left;
+	margin-right: 20px;
+	width: 568px;
+	margin-right: 30px
+}
+* html #content #main {
+	overflow-x: hidden
+}
+#content #sidebar {
+	display: inline;
+	float: left;
+	width: 322px
+}
+#sidebar .search {
+	margin-bottom: 20px;
+	overflow: hidden;
+	display: inline-block
+}
+#sidebar .search {
+	display: block
+}
+#sidebar .search input {
+	border: none;
+	background: transparent url('http://z.textsfromlastnight.com/images/bg-search.png') no-repeat 0px 0px;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+	height: 25px;
+	width: 245px;
+	line-height: 30px;
+	font-size: 16px;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	color: #2b2b2b;
+	padding: 7px 15px 3px;
+	margin-right: 0px !important;
+	display: inline;
+	float: left
+}
+#sidebar .search input.placeholder {
+	color: #828282
+}
+#sidebar .search a {
+	text-indent: -9999em;
+	overflow: hidden;
+	background-image: url('http://z.textsfromlastnight.com/images/sprite-btn-search.png');
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-position: left top;
+	height: 35px;
+	width: 43px;
+	display: block;
+	display: inline;
+	float: left;
+	border: none;
+	margin: 0
+}
+#sidebar .search a:hover {
+	background-position: left center
+}
+#sidebar .search a:active {
+	background-position: left bottom
+}
+#sidebar .box {
+	background: url('http://z.textsfromlastnight.com/images/box-bg.png');
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border: solid 1px #d0d0d0;
+	padding: 10px;
+	margin: 0 0 15px 0
+}
+#sidebar .box .actions {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	overflow: hidden;
+	display: inline-block;
+	margin-bottom: 10px
+}
+#sidebar .box .actions {
+	display: block
+}
+#sidebar .box .actions li {
+	list-style-type: none;
+	margin-left: 0px;
+	white-space: nowrap;
+	display: inline;
+	float: left;
+	padding-left: 4px;
+	padding-right: 4px
+}
+#sidebar .box .actions li.first {
+	padding-left: 0px
+}
+#sidebar .box .actions li.last {
+	padding-right: 0px
+}
+#sidebar .box .actions li {
+	padding: 0
+}
+#sidebar .box .actions a {
+	background-position: left top;
+	background-repeat: no-repeat;
+	background-color: transparent;
+	height: 34px;
+	display: -moz-inline-box;
+	-moz-box-orient: vertical;
+	display: inline-block;
+	vertical-align: middle;#display:inline;#vertical-align:auto;
+	padding-left: 28px;
+	margin-right: 12px;
+	font-size: 14px;
+	line-height: 34px;
+	text-shadow: 0px 1px 0px #fff
+}
+#sidebar .box .actions a:hover {
+	text-decoration: none
+}
+#sidebar .box .actions a:active {
+	background-position: left bottom
+}
+#sidebar .box .actions a.submit {
+	background-image: url('http://z.textsfromlastnight.com/images/sprite-btn-submit.png');
+	width: 55px
+}
+#sidebar .box .actions a.favorites {
+	background-image: url('http://z.textsfromlastnight.com/images/sprite-btn-favorites.png');
+	width: 74px
+}
+#sidebar .box .actions a.text-us {
+	background-image: url('http://z.textsfromlastnight.com/images/sprite-btn-txtus.png');
+	width: 59px;
+	margin-right: 0;
+	padding-left: 32px
+}
+#sidebar .box .ad-square {
+	margin-bottom: 10px;
+	text-align: center
+}
+#sidebar .box .ad-square img {
+	border: solid 1px #fff
+}
+#sidebar .box .ad-small {
+	margin-bottom: 10px;
+	text-align: center
+}
+#sidebar .box .ad-small img {
+	border: "solid" 1px #fff
+}
+#sidebar .box .tabs {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	overflow: hidden;
+	display: inline-block
+}
+#sidebar .box .tabs {
+	display: block
+}
+#sidebar .box .tabs li {
+	list-style-type: none;
+	margin-left: 0px;
+	white-space: nowrap;
+	display: inline;
+	float: left;
+	padding-left: 4px;
+	padding-right: 4px
+}
+#sidebar .box .tabs li.first {
+	padding-left: 0px
+}
+#sidebar .box .tabs li.last {
+	padding-right: 0px
+}
+#sidebar .box .tabs li {
+	padding: 0;
+	margin: 0 3px 0 0
+}
+#sidebar .box .tabs a {
+	display: -moz-inline-box;
+	-moz-box-orient: vertical;
+	display: inline-block;
+	vertical-align: middle;#display:inline;#vertical-align:auto;
+	padding: 2px 10px;
+	font-size: 12px;
+	border: solid 1px #d0d0d0;
+	background: white url('http://z.textsfromlastnight.com/images/bg-tab.png') repeat-x 0px 0px;
+	border-bottom: none;
+	border-top-left-radius: 3px;
+	-moz-border-radius-topleft: 3px;
+	-webkit-border-top-left-radius: 3px;
+	border-bottom-left-radius: 3px;
+	-moz-border-radius-bottomleft: 3px;
+	-webkit-border-bottom-left-radius: 3px;
+	text-shadow: 0px 1px 0px #fff;
+	color: #777
+}
+#sidebar .box .tabs a.selected {
+	color: #841616
+}
+#sidebar .box #most-active,#sidebar .box #flickr,#sidebar .box #twitter,#sidebar .box #archive {
+	padding: 10px;
+	background: #fff url('http://z.textsfromlastnight.com/images/bg-sidebar-box.png') repeat-x 0px bottom;
+	border: solid 1px #d0d0d0;
+	margin-bottom: 10px;
+	border-top-right-radius: 3px;
+	-moz-border-radius-topright: 3px;
+	-webkit-border-top-right-radius: 3px;
+	border-bottom-right-radius: 3px;
+	-moz-border-radius-bottomright: 3px;
+	-webkit-border-bottom-right-radius: 3px;
+	-webkit-box-shadow: 0px 1px 2px rgba(0,0,0,0.1);
+	-moz-box-shadow: 0px 1px 2px rgba(0,0,0,0.1);
+	box-shadow: 0px 1px 2px rgba(0,0,0,0.1)
+}
+#sidebar .box #most-active {
+	display: block;
+	font-size: 13px;
+	-moz-column-count: 2;
+	-webkit-column-count: 2;
+	column-count: 2;
+	-moz-column-gap: 10px;
+	-webkit-column-gap: 10px;
+	column-gap: 10px
+}
+#sidebar .box #most-active a {
+	color: #2b2b2b;
+	font-weight: normal
+}
+#sidebar .box #most-active ul {
+	margin: 0;
+	padding: 0
+}
+#sidebar .box #most-active ul li {
+	list-style-type: none;
+	margin-left: 0px
+}
+#sidebar .box #flickr {
+	display: none;
+	text-align: center;
+	padding-right: 0;
+	padding-bottom: 0;
+	padding-left: 15px;
+	padding-top: 15px
+}
+#sidebar .box #flickr img {
+	margin-right: 15px;
+	margin-bottom: 15px;
+	display: inline
+}
+#sidebar .box #twitter {
+	display: none;
+	padding-right: 0;
+	padding-bottom: 0;
+	padding-left: 15px;
+	padding-top: 15px
+}
+#sidebar .box #twitter ul {
+	margin-left: 0;
+	margin-right: 1.25em;
+	margin-bottom: 0.25em;
+	font-size: 85%;
+	line-height: 1.25em;
+	padding-left: 0
+}
+#sidebar .box #twitter ul li {
+	list-style-type: none;
+	margin-left: 0px
+}
+#sidebar .box #twitter ul li {
+	margin-bottom: 0.5em
+}
+#sidebar .box #twitter ul li a {
+	font-weight: normal;
+	font-size: 12px
+}
+#sidebar .box #twitter ul li a:hover {
+	color: #7b1212
+}
+#sidebar .box #twitter p {
+	margin: 0 1em 0.5em 0;
+	font-size: 80%;
+	text-align: right
+}
+#sidebar .box #archive {
+	padding: 2px 10px;
+	text-align: center
+}
+#sidebar .box #archive a {
+	font-size: 13px
+}
+#sidebar .box #archive .months {
+	display: none;
+	text-align: left
+}
+#sidebar .box #archive .months ul {
+	margin: 5px 0 10px 0;
+	padding: 0 10px;
+	font-size: 80%
+}
+#sidebar .box #archive .months ul li {
+	list-style-type: none;
+	margin-left: 0px
+}
+#sidebar .box #find-us {
+	overflow: hidden;
+	display: inline-block
+}
+#sidebar .box #find-us {
+	display: block
+}
+#sidebar .box #find-us h4 {
+	color: #841616;
+	font-weight: bold;
+	font-size: 15px;
+	display: inline;
+	float: left;
+	line-height: 32px;
+	margin: 0px 15px 0px 0px
+}
+#sidebar .box #find-us ul {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	overflow: hidden;
+	display: inline-block;
+	display: inline;
+	float: left
+}
+#sidebar .box #find-us ul {
+	display: block
+}
+#sidebar .box #find-us ul li {
+	list-style-type: none;
+	margin-left: 0px;
+	white-space: nowrap;
+	display: inline;
+	float: left;
+	padding-left: 0px;
+	padding-right: 0px
+}
+#sidebar .box #find-us ul li.first {
+	padding-left: 0px
+}
+#sidebar .box #find-us ul li.last {
+	padding-right: 0px
+}
+#sidebar .box #find-us ul li {
+	margin-right: 10px
+}
+#sidebar .box #find-us ul a {
+	text-indent: -9999px;
+	overflow: hidden;
+	display: block;
+	height: 32px;
+	width: 32px;
+	background: transparent no-repeat 0 0
+}
+#sidebar .box #find-us ul a:hover {
+	background-position: inherit bottom
+}
+#sidebar .box #find-us ul .twitter a {
+	background-image: url('http://z.textsfromlastnight.com/images/share-sprite.png');
+	background-position: 0 0
+}
+#sidebar .box #find-us ul .twitter a:hover {
+	background-position: 0 bottom
+}
+#sidebar .box #find-us ul .facebook a {
+	background-image: url('http://z.textsfromlastnight.com/images/share-sprite.png');
+	background-position: -32px 0
+}
+#sidebar .box #find-us ul .facebook a:hover {
+	background-position: -32px bottom
+}
+#sidebar .box #find-us ul .digg a {
+	background-image: url('http://z.textsfromlastnight.com/images/share-sprite.png');
+	background-position: -96px 0
+}
+#sidebar .box #find-us ul .digg a:hover {
+	background-position: -96px bottom
+}
+#sidebar .box #find-us ul .stumbleupon a {
+	background-image: url('http://z.textsfromlastnight.com/images/share-sprite.png');
+	background-position: -64px 0
+}
+#sidebar .box #find-us ul .stumbleupon a:hover {
+	background-position: -64px bottom
+}
+#sidebar .box #find-us ul .reddit a {
+	background-image: url('http://z.textsfromlastnight.com/images/share-sprite.png');
+	background-position: -128px 0
+}
+#sidebar .box #find-us ul .reddit a:hover {
+	background-position: -128px bottom
+}
+#sidebar .box #find-us ul .reddit {
+	margin-right: 0
+}
+#sidebar #language-switcher {
+	overflow: hidden;
+	display: inline-block;
+	font-size: 12px
+}
+#sidebar #language-switcher {
+	display: block
+}
+#sidebar #language-switcher strong {
+	color: #6f6f6f
+}
+#sidebar #language-switcher ul {
+	display: inline;
+	float: right;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	overflow: hidden;
+	display: inline-block;
+	line-height: 16px
+}
+#sidebar #language-switcher ul {
+	display: block
+}
+#sidebar #language-switcher ul li {
+	list-style-type: none;
+	margin-left: 0px;
+	white-space: nowrap;
+	display: inline;
+	float: left;
+	padding-left: 4px;
+	padding-right: 4px
+}
+#sidebar #language-switcher ul li.first {
+	padding-left: 0px
+}
+#sidebar #language-switcher ul li.last {
+	padding-right: 0px
+}
+#sidebar #language-switcher ul a {
+	display: block;
+	vertical-align: middle;
+	width: 16px;
+	height: 16px;
+	text-indent: -9999px;
+	overflow: hidden;
+	background-position: left top
+}
+#sidebar #language-switcher ul a:hover {
+	background-position: left bottom !important
+}
+#sidebar #language-switcher ul .usa a {
+	background: url('http://z.textsfromlastnight.com/images/usa.png') no-repeat
+}
+#sidebar #language-switcher ul .france a {
+	background: url('http://z.textsfromlastnight.com/images/france.png') no-repeat
+}
+#sidebar #language-switcher ul .germany a {
+	background: url('http://z.textsfromlastnight.com/images/germany.png') no-repeat
+}
+#sidebar #language-switcher ul .spain a {
+	background: url('http://z.textsfromlastnight.com/images/spain.png') no-repeat
+}
+#page_footer {
+	clear: both;
+	background: #1d1d1d url('http://z.textsfromlastnight.com/images/page-footer.png') no-repeat 0px -1px;
+	height: 64px;
+	border-top: solid 1px #e0e2e3;
+	margin-bottom: 5px;
+	padding: 20px 20px 0 20px
+}
+#page_footer ul.pagination {
+	display: inline;
+	float: left;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	overflow: hidden;
+	display: inline-block;
+	margin-right: 75px
+}
+#page_footer ul.pagination {
+	display: block
+}
+#page_footer ul.pagination li {
+	list-style-type: none;
+	margin-left: 0px;
+	white-space: nowrap;
+	display: inline;
+	float: left;
+	padding-left: 4px;
+	padding-right: 4px
+}
+#page_footer ul.pagination li.first {
+	padding-left: 0px
+}
+#page_footer ul.pagination li.last {
+	padding-right: 0px
+}
+#page_footer ul.pagination li {
+	padding: 0
+}
+#page_footer ul.pagination li.selected {
+	display: -moz-inline-box;
+	-moz-box-orient: vertical;
+	display: inline-block;
+	vertical-align: middle;#display:inline;#vertical-align:auto;
+	padding: 5px 8px;
+	line-height: 1;
+	font-size: 15px;
+	font-weight: bold;
+	color: #fff;
+	border: solid 1px #400c0c;
+	background: url('http://z.textsfromlastnight.com/images/bg-paginate.png') repeat-x 0px 0px;
+	margin-right: 3px;
+	text-shadow: 0px 1px 1px rgba(0,0,0,0.5);
+	-webkit-box-shadow: 0px 1px 2px rgba(0,0,0,0.1);
+	-moz-box-shadow: 0px 1px 2px rgba(0,0,0,0.1);
+	box-shadow: 0px 1px 2px rgba(0,0,0,0.1)
+}
+#page_footer ul.pagination li.next a {
+	font-size: 14px;
+	color: #fff;
+	background: url('http://z.textsfromlastnight.com/images/btn-next-page.png') no-repeat 0px 0px;
+	border: none;
+	height: 31px;
+	width: 109px;
+	padding: 0 0 0 10px;
+	line-height: 30px;
+	text-shadow: 0px 1px 1px rgba(0,0,0,0.4)
+}
+#page_footer ul.pagination li.next a:hover {
+	text-decoration: none
+}
+#page_footer ul.pagination li.next a:active {
+	background-position: left bottom;
+	color: #e99069
+}
+#page_footer ul.pagination li.prev a {
+	font-size: 14px;
+	color: #fff;
+	background: url('http://z.textsfromlastnight.com/images/btn-prev-page.png') no-repeat 0px 0px;
+	border: none;
+	height: 31px;
+	width: 109px;
+	padding: 0 10px 0 0;
+	text-align: right;
+	line-height: 30px;
+	text-shadow: 0px 1px 1px rgba(0,0,0,0.4)
+}
+#page_footer ul.pagination li.prev a:hover {
+	text-decoration: none
+}
+#page_footer ul.pagination li.prev a:active {
+	background-position: left bottom;
+	color: #e99069
+}
+#page_footer ul.pagination li a {
+	display: -moz-inline-box;
+	-moz-box-orient: vertical;
+	display: inline-block;
+	vertical-align: middle;#display:inline;#vertical-align:auto;
+	padding: 5px 8px;
+	line-height: 1;
+	font-size: 15px;
+	font-weight: bold;
+	border: solid 1px #bbbbbb;
+	background-color: #fff;
+	margin-right: 3px;
+	color: #333
+}
+#page_footer .jump {
+	display: inline;
+	float: left
+}
+#page_footer .jump label {
+	font-size: 12px;
+	font-weight: bold;
+	text-shadow: 0px 1px #fff;
+	vertical-align: middle
+}
+#page_footer .jump input {
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 13px;
+	color: #2b2b2b;
+	padding: 5px;
+	border: solid 1px #ababab;
+	background: white url('http://z.textsfromlastnight.com/images/bg-input.png') repeat-x 0px 0px
+}
+#page_footer .jump a {
+	display: -moz-inline-box;
+	-moz-box-orient: vertical;
+	display: inline-block;
+	vertical-align: middle;#display:inline;#vertical-align:auto;
+	background: url('http://z.textsfromlastnight.com/images/btn-go.png') no-repeat 0px top;
+	width: 49px;
+	height: 30px;
+	padding-left: 10px;
+	color: #fff;
+	font-size: 14px;
+	line-height: 28px;
+	text-shadow: 0px 1px 1px rgba(0,0,0,0.4)
+}
+#page_footer .jump a:hover {
+	text-decoration: none
+}
+#page_footer .jump a:active {
+	background-position: left bottom;
+	color: #e99069
+}
+#page_footer .credit {
+	display: inline;
+	float: right;
+	font-size: 12px;
+	color: #696969;
+	text-shadow: 0px 1px #fff;
+	font-weight: bold;
+	line-height: 27px
+}
+#page_footer .credit a {
+	text-indent: -9999em;
+	overflow: hidden;
+	background-image: url('http://z.textsfromlastnight.com/images/metalab-credit.png');
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	display: -moz-inline-box;
+	-moz-box-orient: vertical;
+	display: inline-block;
+	vertical-align: middle;#display:inline;#vertical-align:auto;
+	vertical-align: middle;
+	height: 27px;
+	width: 86px;
+	margin-left: 10px
+}
+#ads-lower {
+	margin-bottom: 20px;
+	text-align: center
+}
+#footer {
+	background: url('http://z.textsfromlastnight.com/images/bg-footer.png') repeat-x 0px 0px;
+	color: #fff;
+	font-size: 12px;
+	overflow: hidden;
+	display: inline-block;
+	padding: 0;
+	text-shadow: 0px -1px 0px #000
+}
+#footer {
+	display: block
+}
+#footer ul {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	overflow: hidden;
+	display: inline-block;
+	display: inline;
+	float: left;
+	margin-top: 13px
+}
+#footer ul {
+	display: block
+}
+#footer ul li {
+	list-style-type: none;
+	margin-left: 0px;
+	white-space: nowrap;
+	display: inline;
+	float: left;
+	padding-left: 7px;
+	padding-right: 7px
+}
+#footer ul li.first {
+	padding-left: 0px
+}
+#footer ul li.last {
+	padding-right: 0px
+}
+#footer p.copyright {
+	display: inline;
+	float: right;
+	margin-top: 13px
+}
+#footer p.metalab {
+	display: inline;
+	float: right;
+	font-size: 12px;
+	color: #777;
+	margin-top: 10px;
+	margin-left: 15px
+}
+#footer p.metalab img {
+	margin-left: 5px;
+	vertical-align: middle
+}
+#footer a {
+	color: #fff
+}
+.notification {
+	background-repeat: no-repeat;
+	background-position: 16px center;
+	padding-left: 64px !important
+}
+.notification.success {
+	background-image: url('http://z.textsfromlastnight.com/images/status/checkmark_32.png')
+}
+.notification.error {
+	background-image: url('http://z.textsfromlastnight.com/images/status/error_32.png')
+}
+.notification.notice {
+	background-image: url('http://z.textsfromlastnight.com/images/status/warning_32.png')
+}
+
+
+

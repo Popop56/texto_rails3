@@ -1,0 +1,6 @@
+<div class="texto">
+	<p><%=h texto.content %></p>
+	<%= render :partial => "shared/replyDIv", :collection => texto.replies %>
+	<br />
+	<p><%=h texto.created_at %></p>	
+</div>

@@ -22,6 +22,7 @@ class TextosController < ApplicationController
   # GET /textos/1.xml
   def show
     @texto = Texto.find(params[:id])
+    @comments = @texto.comments
 
     respond_to do |format|
       format.html # show.html.erb
@@ -32,7 +33,8 @@ class TextosController < ApplicationController
   # GET /textos/new
   # GET /textos/new.xml
   def new
-    @textos = Texto.new
+    @texto = Texto.new
+    0.times { @texto.replies.build }
 
     respond_to do |format|
       format.html # new.html.erb
@@ -54,6 +56,12 @@ class TextosController < ApplicationController
     @texto.good = 0
     @texto.status = 0
     @texto.ip_address = request.remote_ip
+    logger.debug "user: #{current_user.id}"
+        
+    # If user is logged in, we add his ID
+    if user_signed_in?
+      @texto.users_id = current_user.id  
+    end
 
     respond_to do |format|
       if @texto.save
@@ -130,11 +138,18 @@ class TextosController < ApplicationController
   	
   	if !favorited_texto.include?(params[:id])
   		@texto = Texto.find(params[:id])
-		write_favorited_texto(params[:id])
+		  write_favorited_texto(params[:id])
 	    respond_with(@texto)
 	end  
   end
   
+  # Add one field for reply
+  def add_field
+    params.inspect
+    #@textos = Array.new(1+1) { Texto.new } # Generate index+1 objects
+    #respond_with(@textos)
+  end
+    
   
   # private
   protected

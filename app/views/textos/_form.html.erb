@@ -1,11 +1,18 @@
-<% form_for(@textos) do |f| %>
-  <%= f.error_messages %>
+<%= form.error_messages %>
 
-	<% @textos.each do |texto, index| %>
-	  <%= render :partial => 'content_field', :locals => { :texto => texto, :index => index } %>
-	<% end %>
-
+	<div class="field">	
+		  <p><%= form.text_area :content %></p>
+	</div>
+	
+	<div id="reply">
+	  <% form.fields_for :replies do |reply_form| -%>
+	    <%= render :partial => 'reply', :locals => { :form => reply_form } %>
+	  <% end -%>
+	</div>
+	
+	<%= add_reply_link(form) %>
+	
   <div class="actions">
-    <%= f.submit %>
+    <%= submit_tag %>
   </div>
-<% end %>
+

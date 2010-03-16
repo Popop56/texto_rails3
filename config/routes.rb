@@ -4,17 +4,26 @@ TextoRails3::Application.routes.draw do |map|
   
   
   #resources :user, :only => [:edit, :new]
-  devise_for :users
-  #resources :admins, :only => [:index]
+  devise_for :users, :admin
+  resources :admins do
+    resources :textos
+  end
   
   
 
 
   resources :textos do
+    resources :comments
+    
     member do
       get :vote_up, :vote_down, :favorite
     end
-    resources :comments
+    
+    collection do 
+      get :add_field
+    end
+    
+    
   end
 
   # The priority is based upon order of creation:

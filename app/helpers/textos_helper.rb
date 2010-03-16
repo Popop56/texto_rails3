@@ -19,4 +19,13 @@ module TextosHelper
 		end
 	end		
 	
+  def add_reply_link(form_builder)
+    #form_builder.fields_for :replies, Reply.new, :child_index => 'NEW_RECORD' do |f|
+      #html = render(:partial => 'reply', :locals => { :form => f })
+      #page << "$('tasks').insert({ bottom: '#{escape_javascript(html)}'.replace(/NEW_RECORD/g, new Date().getTime()) });"
+    #end    
+    #form_builder.inspect
+    link_to 'add a reply', 'javascript:void(0)', :class => "add_reply_field"
+  end
+	
 end

@@ -1,7 +1,13 @@
 <div class="texto">
 	<p><%=h texto.content %></p>
+	<%= render :partial => "replyDIv", :collection => texto.replies %>
+	<br />
 	<p><%=h texto.created_at %></p>
 	<p>IP: <%=h texto.ip_address %></p>
+	
+	
+	
+	<br />
 	Good: <span id="good_<%= texto.id %>"><%= texto.good %></span> - Bad: <span id="bad_<%= texto.id %>"><%= texto.bad %></span>
 	<!-- favorite helper -->
 	<%= is_favorited(texto) %>

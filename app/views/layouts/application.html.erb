@@ -13,10 +13,26 @@
 
 </head>
 <body style="background: #EEEEEE;">
+	
+<div id="container">
+	
+	<!-- Link -->
+	<%= render :partial => "shared/links" %>
+	
+	<!-- Header -->
+	<%= render :partial => "shared/header" %>
+	
+	<!-- Content -->
+	<div id="content">
+		<p style="color: green"><%= flash[:notice] %></p>
 
-<p style="color: green"><%= flash[:notice] %></p>
-
-<%= yield  %>
+		<%= yield  %>
+	</div>
+	<!-- /Content -->
+	
+	<!-- Footer -->
+	<%= render :partial => "shared/footer" %>
+</div>
 
 </body>
 </html>

@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100312203259) do
+ActiveRecord::Schema.define(:version => 20100314193649) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",                              :null => false
@@ -43,6 +43,14 @@ ActiveRecord::Schema.define(:version => 20100312203259) do
     t.integer  "texto_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "users_id"
+  end
+
+  create_table "replies", :force => true do |t|
+    t.text     "content"
+    t.integer  "texto_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "textos", :force => true do |t|
@@ -50,11 +58,11 @@ ActiveRecord::Schema.define(:version => 20100312203259) do
     t.integer  "good"
     t.integer  "bad"
     t.integer  "status"
-    t.integer  "texto_ref_id"
     t.string   "ip_address"
     t.integer  "validated_by"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "users_id"
   end
 
   create_table "users", :force => true do |t|
