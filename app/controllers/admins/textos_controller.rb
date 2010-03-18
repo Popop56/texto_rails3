@@ -2,7 +2,7 @@ class Admins::TextosController < ApplicationController
   respond_to :html, :xml, :js
   
   def index
-    @textos = Texto.where(["status = ?", 0])
+    @textos = Texto.all(:conditions => "status = 0", :order => "created_at DESC")
   end
   
   # DELETE /admins/textos/1

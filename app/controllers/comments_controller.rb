@@ -45,13 +45,19 @@ class CommentsController < ApplicationController
   def create
     @texto = Texto.find(params[:texto_id])
     @comment = @texto.comments.create(params[:comment])
-
+    @comment.ip = request.remote_ip
+    # If user is logged in, we add his ID
+    if user_signed_in?
+      @comment.users_id = current_user.id  
+    end
+    
     respond_to do |format|
       if @comment.save
         format.html { redirect_to(@texto, :notice => 'Comment was successfully created.') }
         format.xml  { render :xml => @comment, :status => :created, :location => @comment }
         format.js   { respond_with(@comment) }  
       else
+        logger.debug("here fuckER")
         format.html { render :action => "new" }
         format.xml  { render :xml => @comment.errors, :status => :unprocessable_entity }
       end
@@ -74,16 +80,6 @@ class CommentsController < ApplicationController
     end
   end
 
-  # DELETE /comments/1
-  # DELETE /comments/1.xml
-  def destroy
-    @comment = Comment.find(params[:id])
-    @comment.destroy
 
-    respond_to do |format|
-      format.html { redirect_to(comments_url) }
-      format.xml  { head :ok }
-    end
-  end
   
 end

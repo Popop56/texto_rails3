@@ -1,12 +1,15 @@
 TextoRails3::Application.routes.draw do |map|
-  resource :user, :only => [:edit, :new]
+  # Profile
+  resource :profiles
+  namespace :profiles do
+    resources :textos, :only => [:index,:destroy]
+    resources :comments, :only => [:destroy]
+  end
 
-  
-  
-  #resources :user, :only => [:edit, :new]
+
   devise_for :users, :admin
   
-  #resources :admins
+  resources :admins, :only => [:index]
   #  resources :textos, :controller => "admins/texto"
   #end
   
@@ -17,6 +20,8 @@ TextoRails3::Application.routes.draw do |map|
   	    get :approve
   	  end
   	end
+  	
+  	resources :comments, :only => [:index, :destroy]
   
   end
   
@@ -31,11 +36,11 @@ TextoRails3::Application.routes.draw do |map|
     end
     
     collection do 
-      get :add_field
+      get :add_field, :random
     end
-    
-    
   end
+  match 'textos/best_by/:group_by' => 'textos#best_by', :as => 'best_textos_by'
+  match 'textos/worst_by/:group_by' => 'textos#worst_by', :as => 'worst_textos_by'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

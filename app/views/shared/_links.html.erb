@@ -3,10 +3,31 @@
 	<li><%= link_to 'Textot\' us!', new_texto_path %></li>
 	
 	<% if user_signed_in? %>
-    <li><%= link_to 'My info', edit_user_registration_path %></li>
-    <li><%= link_to 'Sign out', destroy_user_session_path %></li>
+	    <li><%= link_to 'My info', edit_user_registration_path %></li>
+	    <li><%= link_to 'Sign out', destroy_user_session_path %></li>
 	<% else %>
-	<li><%= link_to 'Register', new_user_registration_path %></li>
-	<li><%= link_to 'Sign In', new_user_session_path %></li>
+		<li><%= link_to 'Register', new_user_registration_path %></li>
+		<li><%= link_to 'Sign In', new_user_session_path %></li>
+	<% end %>
+	
+	<% if  admin_signed_in? %>
+	    <li><%= link_to 'Admin CP', admins_path %></li>
+	    <li><%= link_to 'Admin Sign out', destroy_admin_session_path %></li>
+	<% else %>	
+		<li><%= link_to 'Admin', new_admin_session_path %></li>
 	<% end %>
 </ul>
+
+<ul>
+	<li><%= link_to "Best by Week", best_textos_by_path("week") %></li>
+	<li><%= link_to "Best by Month", best_textos_by_path("month") %></li>
+	<li><%= link_to "Best by Year", best_textos_by_path("year") %></li>
+</ul>
+
+<ul>
+	<li><%= link_to "Worst by Week", worst_textos_by_path("week") %></li>
+	<li><%= link_to "Worst by Month", worst_textos_by_path("month") %></li>
+	<li><%= link_to "Worst by Year", worst_textos_by_path("year") %></li>
+</ul>
+
+<%= link_to "Random", random_textos_path %>

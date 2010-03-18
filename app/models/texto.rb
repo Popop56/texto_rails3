@@ -8,4 +8,5 @@ class Texto < ActiveRecord::Base
   
   accepts_nested_attributes_for :replies, :allow_destroy => true
   self.per_page = 15
+  
 end

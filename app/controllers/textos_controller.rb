@@ -17,6 +17,44 @@ class TextosController < ApplicationController
       format.xml  { render :xml => @textos }
     end
   end
+  
+  def best_by
+    @textos2 = Texto.paginate :page => params[:page], :order => 'good DESC, created_at DESC', :conditions => ['status = ?', "1"]
+    
+    case params[:group_by]
+      when "year" 
+        @textos = @textos2.group_by { |t| t.created_at.beginning_of_year }
+        @date_format = "%Y"
+      when "month"
+        @textos = @textos2.group_by { |t| t.created_at.beginning_of_month }
+        @date_format = "%B"
+      when "week"
+        @textos = @textos2.group_by { |t| t.created_at.beginning_of_week }
+        @date_format = "%W"
+      end
+  end
+
+  def worst_by
+    @textos2 = Texto.paginate :page => params[:page], :order => 'bad DESC, created_at DESC', :conditions => ['status = ?', "1"]
+    
+    case params[:group_by]
+      when "year" 
+        @textos = @textos2.group_by { |t| t.created_at.beginning_of_year }
+        @date_format = "%Y"
+      when "month"
+        @textos = @textos2.group_by { |t| t.created_at.beginning_of_month }
+        @date_format = "%B"
+      when "week"
+        @textos = @textos2.group_by { |t| t.created_at.beginning_of_week }
+        @date_format = "%W"
+      end
+  end
+  
+  def random
+    @textos = Texto.paginate :page => params[:page], :order => "RANDOM()", :conditions => ['status = ?', "1"]
+    render :action => "index"
+  end
+
 
   # GET /textos/1
   # GET /textos/1.xml

@@ -1,9 +1,46 @@
-<h2>Admin Dashboard</h2>
 
+
+<h3><%= link_to 'Pending Textos', admins_textos_path %></h3>
 <div id="textos">
-	<%= render :partial => "shared/texto", :collection => @textos %>
+	<table>
+		<thead>
+			<th>Content</th>
+			<th>Added Since</th>
+			<th>Action</th>
+		</thead>
+		<tbody>
+			<%= render :partial => "texto", :collection => @textos %>
+		</tbody>
+	</table>
 </div>
 
+<h3><%= link_to 'New Comments', admins_comments_path %></h3>
+<div id="comments">
+	<table>
+		<thead>
+			<th>Content</th>
+			<th>Added By</th>
+			<th>Added Since</th>
+			<th>Action Delete</th>
+		</thead>
+		<tbody>
+			<%= render :partial => "comment", :collection => @comments %>
+		</tbody>
+	</table>
+</div>
+
+<h3>New users</h3>
+<div id="users">
+	<table>
+		<thead>
+			<th>Email</th>
+			<th>Added Since</th>
+		</thead>
+		<tbody>
+			<%= render :partial => "user", :collection => @users %>
+		</tbody>
+	</table>
+</div>
 
 <br />
 

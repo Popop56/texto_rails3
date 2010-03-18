@@ -1,0 +1,5 @@
+<tr>
+	<td><%= texto.content %></td>
+	<td><%= time_ago_in_words(texto.created_at) %></td>
+	<td><%= link_to "Show", admins_textos_path(:anchor => "texto_#{texto.id}") %>
+</tr>

@@ -1,0 +1,23 @@
+<div id="paginate"><%= will_paginate @textos2 %></div>
+
+<% @textos.sort.reverse.each do |date, textos| %>
+
+
+	<h2><%= date.strftime(@date_format) %></h2>
+
+	<% for texto in textos %>
+		<%= render :partial => "texto", :locals => {:texto => texto} %>
+		<%= link_to "Read Comments (#{texto.comments.length})", texto %> 
+		<%= link_to 'Like', vote_up_texto_path(texto), :remote=>true %>
+		<%= link_to 'Dislike!', vote_down_texto_path(texto), :remote=>true %>
+		<%= link_to_favorite(texto) %>
+	<% end %>
+
+	<br />
+<% end %>
+
+<div id="paginate"><%= will_paginate @textos2 %></div>
+
+
+
+
